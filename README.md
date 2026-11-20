@@ -1,10 +1,10 @@
-# 🌍 CarbonWatch
+#  CarbonWatch
 
 **A multi-threaded client–server CO₂ monitoring system in Java, using TCP sockets.**
 
 CarbonWatch lets residents submit CO₂ readings for their area to a central server over the network. The server handles several clients at the same time with a thread pool, validates every reading and logs it safely to a shared CSV file, ready for analysis.
 
-## ✨ Features
+##  Features
 
 - **Client–server over TCP sockets.** A custom text-based protocol guides the user through each submission.
 - **Concurrent clients.** A fixed thread pool (`ExecutorService`) serves up to 4 clients at once.
@@ -17,7 +17,7 @@ CarbonWatch lets residents submit CO₂ readings for their area to a central ser
 - **Configurable** host, port and CSV path from the command line.
 - Clients can type `QUIT` at any prompt to disconnect.
 
-## 🏗️ Architecture
+##  Architecture
 
     src/
     ├── common/
@@ -34,7 +34,7 @@ CarbonWatch lets residents submit CO₂ readings for their area to a central ser
 
 **Flow:** client connects → server sends welcome → asks for User ID, postcode and CO₂ reading → validates → logs to `data/co2_readings.csv` → confirms and closes the connection.
 
-## 🚀 Getting started
+##  Getting started
 
 You need Java 11 or newer.
 
@@ -55,12 +55,12 @@ Optional arguments:
     java -cp bin server.CO2Server <port> <csv-file>
     java -cp bin client.CO2Client <host> <port>
 
-## 📄 Example output (CSV)
+##  Example output (CSV)
 
     Timestamp,UserID,Postcode,CO2_ppm
     2025-11-16 11:48:43,RES001,CF10 1AA,415.50
 
-## 🔭 Future improvements
+##  Future improvements
 
 - Live dashboard showing readings on a map by postcode
 - Store readings in a database instead of CSV
