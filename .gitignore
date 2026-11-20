@@ -1,0 +1,7 @@
+bin/
+out/
+.idea/
+*.iml
+*.class
+.DS_Store
+data/*.csv
